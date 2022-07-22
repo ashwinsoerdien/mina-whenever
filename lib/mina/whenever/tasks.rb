@@ -1,4 +1,6 @@
-set :whenever_name, -> { "#{fetch(:domain)}_#{fetch(:rails_env)}" }
+task :remote_environment do
+  set :whenever_name, -> { "#{fetch(:domain)}_#{fetch(:rails_env)}" }
+end
 
 namespace :whenever do
   desc 'Clear crontab'
